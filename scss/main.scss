@@ -1,0 +1,311 @@
+@import 'config';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration:  none;
+    outline: none;
+}
+
+html, body {
+    height: 100%;
+    background-color: #000;
+    color: $primary-color;
+}
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 0.2rem;
+    line-height: 1.1rem;
+}
+.padding {
+    padding-bottom: 30px;
+}
+.wrapper {
+    margin: auto;
+}
+.bg-fixed {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+a {
+    color: $primary-color;
+}
+/*-- Header Section ---*/
+.header-section {
+    background-image: url("https://source.unsplash.com/random?101");
+    width: 100%;
+    height: 100vh;
+
+
+    .nav-container {
+        width: 100%;
+        position: fixed;
+        height: 60px;   
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.3);
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            padding: 10px;
+            margin-left: 5%;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            width: 50%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            float: right;
+            cursor: pointer;
+            z-index: 1;
+
+            ul {
+                display: flex;
+                justify-content: space-between;
+                float: left;
+                z-index: 999;
+
+                a {
+                    color: #fff;
+                    transition: all .3s ease-in;
+                    z-index: 999;
+
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+
+            .social-links {
+                width: 150px;
+                margin-left: 5rem;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                float: right;
+
+                i {
+                    color: #fff;
+                    transition: all .3s ease-in;
+
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+
+
+
+        }
+    }
+    .title-container {
+        position: relative;
+        margin: auto;
+        z-index: -1;
+
+        .hero-title {
+            position: absolute;
+            // left: 25vw;
+            // top: 50vh;
+            width: 100%;
+            padding: 200px 250px;
+            font-size: 5rem;
+            line-height: 3rem;
+        }
+
+    }
+
+} 
+
+
+
+// Btn
+
+.btn {
+    text-align: center;
+    padding: 15px 30px;
+    color: #333;
+    background-color: transparent;
+    border: 2px solid $secondary-color;
+    border-radius: 5px;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+.about-section {
+
+    .about-container {
+        height: 450px;
+        background-color: #fff;
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            margin: 0 auto 100px;
+            padding: 20px;
+            color: $secondary-color;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        p {
+            padding: 0 80px;
+            color: $secondary-color;
+            font-size: 1.2rem;
+        }
+    }
+
+    .about-img {
+        background-image: url("https://source.unsplash.com/random?102");
+        width: 100%;
+        min-height: 100vh;
+    }
+
+
+
+
+
+}
+/*--- Work Section ---*/
+.work-section {
+    
+
+    .work-container {
+        height: 450px;
+        background-color: #333;
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        h1 {
+            font-size: 5rem;
+        }
+
+        span {
+            margin-top: -1.5rem;
+            margin-left: 80%;
+            font-size: 3.1rem;
+            text-align: center;
+            transform: rotate(-90deg);
+            cursor: pointer;
+        }
+    }
+
+    .work-img {
+        background-image: url("https://source.unsplash.com/random?104");
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .btn {
+            text-align: center;
+            margin: auto;
+            background-color: #eee;
+            color: #333;
+            border: none;
+
+            &:hover {
+                background-color: #333;
+                color: #eee;
+            }
+        }
+    }
+
+
+}
+
+.contact-section {
+    padding: 50px;
+    background-color: #333;
+
+
+    .wrapper{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+
+        h2 {
+            margin-top: 10%;
+            margin-right: 30%;
+            font-size: 2rem;
+        }
+
+        form {
+            width: 100%;
+
+            input[type="text"],
+            input[type="email"],
+            input[type="submit"] {
+                background-color: transparent;
+                width: 100%;
+                padding: 8px;
+                margin: 1px;
+                color: #fff;
+                letter-spacing: .1rem;
+                cursor: pointer;
+                border: none;
+                box-shadow: .3rem .1rem .5rem .1rem rgb(28, 28, 28);
+                text-decoration: none;
+
+                &:focus {
+                    outline: none;
+                }
+
+
+                &::placeholder {
+                    color: #fff;
+                    letter-spacing: .1rem;
+                    font-size: .8rem;
+                }
+            }
+
+            input[type="submit"]:hover {
+                color: #333;
+                background-color: rgb(201, 201, 201);
+            }
+
+            textarea {
+                background-color: transparent;
+                width: 100%;
+                padding: 8px;
+                margin: 1px;
+                color: #fff;
+                letter-spacing: .1rem;
+                cursor: pointer;
+                border: none;
+                box-shadow: .3rem .1rem .5rem .1rem rgb(28, 28, 28);
+                text-decoration: none;
+
+                &::placeholder {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+}
+
+.footer {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+    border-top: 1px solid rgba(100, 100, 100, 0.8);
+}
