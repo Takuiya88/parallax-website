@@ -1,0 +1,19 @@
+@media (max-width: 850px) {
+    .nav-links {
+        ul, .social-links {
+            display: none !important;
+        }
+    }
+
+    .hero-title {
+        font-size: 2rem !important;
+    }
+
+    .contact-heading {
+
+        h2 {
+            margin-right: 15px;
+            font-size: 1.5rem !important;
+        }
+    }
+}

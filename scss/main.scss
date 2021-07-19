@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+@import 'mobile';
 @import 'config';
 
 
@@ -11,9 +13,10 @@
 }
 
 html, body {
-    height: 100%;
+    width: 100%;
     background-color: #000;
     color: $primary-color;
+    font-family: $main-font-family;
 }
 h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.2rem;
@@ -50,6 +53,7 @@ a {
         align-items: center;
         padding: 10px;
         background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
 
         .logo {
             width: 50px;
@@ -107,22 +111,29 @@ a {
 
         }
     }
-    .title-container {
-        position: relative;
-        margin: auto;
-        z-index: -1;
+    .row {
 
-        .hero-title {
-            position: absolute;
-            // left: 25vw;
-            // top: 50vh;
-            width: 100%;
-            padding: 200px 250px;
-            font-size: 5rem;
-            line-height: 3rem;
+        .title-container {
+            position: relative;
+            margin: auto;
+            top: 200px;
+    
+            .hero-title {
+                position: absolute;
+                top: 0;
+                left: 25%;
+                transform: translateY(100%);
+                margin: 0 auto;
+                padding: 10px;
+                font-size: 5rem;
+                line-height: 3rem;
+                z-index: 1;
+            }
+    
         }
 
     }
+
 
 } 
 
@@ -242,11 +253,19 @@ a {
         grid-template-columns: 1fr 1fr;
         text-align: center;
 
-        h2 {
-            margin-top: 10%;
-            margin-right: 30%;
-            font-size: 2rem;
+        .contact-heading {
+            margin: 0 auto;
+
+            h2 {
+                margin-top: 10%;
+                padding-bottom: 1.5rem;
+                font-size: 2.5rem;
+                border-bottom: 1px solid #fff;
+            }
+
         }
+
+
 
         form {
             width: 100%;
@@ -272,8 +291,9 @@ a {
 
                 &::placeholder {
                     color: #fff;
-                    letter-spacing: .1rem;
+                    letter-spacing: .3rem;
                     font-size: .8rem;
+                    font-family: $main-font-family;
                 }
             }
 
@@ -296,6 +316,9 @@ a {
 
                 &::placeholder {
                     color: #fff;
+                    font-family: $main-font-family;
+                    font-size: .8rem;
+                    letter-spacing: .3rem;
                 }
             }
         }
